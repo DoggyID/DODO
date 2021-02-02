@@ -9,7 +9,7 @@
 
 
 .title{
-	font-size: 		50px;
+	font-size: 		100px;
 	color:			#273032;
 	border:			solid 3px #00A217;
 	text-align:		center;
@@ -20,7 +20,7 @@
 }
 
 .text{
-	margin-left:	200px;
+	margin-left:	300px;
 	font-size: 		15px;
 	color: 			#273032;
 }
@@ -30,7 +30,7 @@
 }
 
 .topic{ 
-	font-size: 		30px;
+	font-size: 		50px;
 	color: 			#00A217;
 }
 
@@ -51,16 +51,19 @@
 	margin-left:	50px;
 }
 .list{
-	font-size:		15px;
+	font-size:		30px;
+
 }
 
 .sticky{
 	position: 		sticky;
 	top:			0;
-	} 
+	}
 	
 .box{
 	border:			solid 3px #00A217;
 }
 
-.listname{ 
+li{
+	border-bottom: solid 1px #000000
+}
