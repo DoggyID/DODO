@@ -19,12 +19,6 @@
 	margin-left:	130px;
 }
 
-.text{
-	margin-left:	300px;
-	font-size: 		15px;
-	color: 			#273032;
-}
-	
 .description-title{
 	font-size: 		25px;
 }
@@ -34,14 +28,20 @@
 	color: 			#00A217;
 }
 
-.back-image{
-	background-image: url(polygon-back.png);
-}
-
 .subtitle{
-	font-size:		30px;
+	font-size:		40px;
 	background-color:#9EBEC7;
 	margin-left:	20px;
+}
+
+.text{
+	margin-left:	300px;
+	font-size: 		15px;
+	color: 			#273032;
+}
+
+.back-image{
+	background-image: url(polygon-back.png);
 }
 
 .content{
@@ -50,6 +50,7 @@
 	color: 			#273032;
 	margin-left:	50px;
 }
+
 .list{
 	font-size:		30px;
 
