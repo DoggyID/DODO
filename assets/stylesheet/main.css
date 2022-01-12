@@ -1,70 +1,81 @@
 /* Color Theme Swatches in Hex */
 /* Color Theme Swatches in Hex */
-.bG		{ background: #273032; }
-.bGB 	{ background: #9EBEC7; }
-.bW 	{ background: #FFFFFF; }
-.bGr 	{ background: #00A217; }
-.bCB 	{ background: #DCEBEF; }
+.bG		{ background: 	#273032; }
+.bGB 	{ background: 	#9EBEC7; }
+.bW 	{ background: 	#FFFFFF; }
+.bGr 	{ background: 	#00A217; }
+.bCB 	{ background: 	#DCEBEF; }
 
 
+.bigletter{
+	font-size:			2000px;
+}
 
 .title{
-	font-size: 		100px;
-	color:			#273032;
-	border:			solid 3px #00A217;
-	text-align:		center;
-	margin-top:		70px;
-	margin-bottom:	70px;
-	margin-right:	200px;
-	margin-left:	130px;
+	font-size: 			100px;
+	color:				#273032;
+	border:				solid 3px #00A217;
+	text-align:			center;
+	margin-top:			70px;
+	margin-bottom:		70px;
+	margin-right:		200px;
+	margin-left:		130px;
 }
 
 .description-title{
-	font-size: 		25px;
+	font-size: 			25px;
 }
 
 .topic{ 
-	font-size: 		50px;
-	color: 			#00A217;
+	font-size: 			50px;
+	color: 				#00A217;
 }
 
 .subtitle{
-	font-size:		40px;
-	background-color:#9EBEC7;
-	margin-left:	20px;
+	font-size:			40px;
+	background-color:	#9EBEC7;
+	margin-left:		20px;
 }
 
 .text{
-	margin-left:	300px;
-	font-size: 		15px;
-	color: 			#273032;
+	margin-left:		300px;
+	font-size: 			15px;
+	color: 				#273032;
 }
 
 .back-image{
-	background-image: url(polygon-back.png);
+	background-image: 	url(polygon-back.png);
 }
 
 .content{
-	font-size:		20px;
-	line-hight:		10px;
-	color: 			#273032;
-	margin-left:	50px;
+	font-size:			20px;
+	line-hight:			10px;
+	color: 				#273032;
+	margin-left:		50px;
+}
+
+.nicest{
+	font-size:			50px;
+	font-family:		;
+	margin-left:		200;
+	color:				red;
+	
 }
 
 .list{
-	font-size:		30px;
+	font-size:			30px;
 
 }
 
 .sticky{
-	position: 		sticky;
-	top:			0;
+	position: 			sticky;
+	top:				0;
 	}
 	
 .box{
-	border:			solid 3px #00A217;
+	border:				solid 3px #00A217;
 }
 
 li{
-	border-bottom: solid 1px #000000
+	border-bottom: 		solid 1px #000000
 }
