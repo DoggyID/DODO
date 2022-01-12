@@ -38,7 +38,7 @@
 }
 
 .text{
-	margin-left:		300px;
+	margin-left:		30px;
 	font-size: 			15px;
 	color: 				#273032;
 }
@@ -51,7 +51,7 @@
 	font-size:			20px;
 	line-hight:			10px;
 	color: 				#273032;
-	margin-left:		50px;
+	margin-left:		10px;
 }
 
 .nicest{
@@ -78,4 +78,9 @@
 
 li{
 	border-bottom: 		solid 1px #000000
+}
+
+.artist{
+	font-size:			30px;
+	color:				#00A217;
 }
