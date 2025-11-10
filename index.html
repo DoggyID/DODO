@@ -1,118 +1,298 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Silicon Farm</title>
-<link rel="stylesheet" href="assets\stylesheet\main.css" href="assets">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon Farm - Home</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Simple smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Subtle gradient background */
+            background-image: linear-gradient(to bottom, #F9FAFB 0%, #ECFDF5 100%); /* gray-50 to emerald-50 */
+            min-height: 100vh;
+            transition: background-image 0.3s ease-in-out;
+        }
+        .dark body {
+            /* Dark mode gradient */
+            background-image: linear-gradient(to bottom, #111827 0%, #064E3B 100%); /* gray-900 to emerald-900 */
+        }
+        
+        /* Keyframes for wobbling/floating effect */
+        @keyframes subtle-float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
 
-<div>
-	<body class="text">
-		<h1>
-			<p class="title">Geneous Website</p>
-			<p class="description-title">The websites made by Hingham Buckingham</p>
-		</h1>
-		
-		<h2>
-		<p class="topic"> LINKS </p>
-			<ul>
-				<table>
-				<thread>
-					<tr><td>・ Profile</td></tr>
-					<tr><td>・ <a href="project.html">Project</a></td></tr>
-					<tr><td>・ Recent News</td></tr>
-				</thread>
-				</table>
-			</ul>
-		<p class="topic"> TOPICS </p>
-			<ul>
-				<table>
-					<thread>
-						<tr><td>・ About This website</td></tr>
-						<tr><td>・ Hobbies</td></tr>
-						<tr><td>・ </td></tr>
-					</thread>
-				</table>
-			</ul>
-		</h2>
-		
-		<h2>
-		<p class="subtitle sticky"> About this website </p>
-			<div class="content">
-				<p> Welcome, this website is just for nothing. If you would like to see my random post, it's weird but ok. <br> 
-				The reason why I made this website is simple.
-				<br> I just made this website for a school project so this website is almost alike the practice one.
-				<br> If I'll make a new website in the future, I might post the link here. However, I won't add any fun part in here, because it's boring to do so.<br>
-				To check my links and recent news, access the website below.<p> 
-			</div>
-		</h2>
-		
-		<h2>
-		<p class="subtitle sticky"> Hobbies </p>
-			<div class="content">
-				<p>From here, I will going to introduce my hobbies</p>
-			
-		<p class="list">Musics</p>
-			<ul>
-				<li class="bottom">
-					<p class="artist">
-						YACA IN DA HOUSE :Trackmaker
-					</P>
-					<iframe 
-						width="560" height="315" 
-						src="https://www.youtube.com/embed/XSRVsc-NkAA" 
-						frameborder="0" 
-						allow=" clipboard-write; encrypted-media; picture-in-picture"
-						allowfullscreen >
-					</iframe>	
-					<p>Twitter:
-						<a href="https://twitter.com/c_yaca?s=20">
-							@c_yaca
-						</a>
-					</p>
-					<p>YouTube: 
-						<a href="https://www.youtube.com/channel/UCnp8kxpT6Z978ZEMVFn58nw">
-							YACA IN DA HOUSE
-						</a>
-					</p>
-				</li>
-				
-				<li>
-					<p class="artist">
-						somunia :Singing somewhere in the internet
-					</p>
-					<iframe
-						width="560" height="315" 
-						src="https://www.youtube.com/embed/hNvV8DgRvOU" 
-						frameborder="0" 
-						allow=" clipboard-write; encrypted-media; picture-in-picture"
-						allowfullscreen >
-					</iframe>
-					<p>Twitter:
-						<a href="https://twitter.com/she_is_wired?s=20">
-							@she_is_wired
-						</a>
-					</p>
-					<p>YouTube:
-						<a href="https://www.youtube.com/channel/UCqhnvjASWaS1eF_023Y--DQ">
-							somunia room
-						</a>
-					</p>
-					<p>somunia Shop
-						<a href="https://somunia.stores.jp/"> 
-							somunia store 
-						</a>
-					</p>
-				</li>
-			</ul>
-			<p class="list sticky">Games</p>
-				<ul>
-					<li></li>
-					<li></li>
-					
-				</ul>
-			
-		
-		</h2>
+        /* Apply float to sidebar links on hover */
+        aside nav a:hover {
+            animation: subtle-float 0.6s ease-in-out;
+            /* Also apply the gradient text on hover for more dynamism */
+            background-image: linear-gradient(to right, #059669, #047857);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .dark aside nav a:hover {
+            background-image: linear-gradient(to right, #6EE7B7, #34D399); /* emerald-300 to emerald-400 */
+        }
+        
+        /* --- Color Gradation --- */
+
+        /* Card Headers / Section Titles */
+        .bg-custom-light-blue { 
+            /* background-color: #D1FAE5; /* Tailwind emerald-100 */
+            background-image: linear-gradient(to right, #D1FAE5, #A7F3D0); /* emerald-100 to emerald-200 */
+            transition: background-image 0.3s ease-in-out;
+        } 
+        .dark .bg-custom-light-blue {
+            background-image: linear-gradient(to right, #374151, #4B5563); /* gray-700 to gray-600 */
+        }
+        
+        /* Accent Color (Gradient Text) */
+        .text-custom-green { 
+            background-image: linear-gradient(to right, #059669, #047857); /* emerald-600 to emerald-700 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: background-image 0.3s ease-in-out;
+        }
+        .dark .text-custom-green {
+            background-image: linear-gradient(to right, #34D399, #10B981); /* emerald-400 to emerald-500 */
+        }
+        /* Solid border color remains for clean separation */
+        .border-custom-green { 
+            border-color: #059669; /* Tailwind emerald-600 */
+            transition: border-color 0.3s ease-in-out;
+        }
+        .dark .border-custom-green {
+            border-color: #065F46; /* emerald-800 */
+        }
+
+        /* Button Gradient (for project.html) */
+        .bg-custom-green { 
+            background-image: linear-gradient(to right, #059669 0%, #06B6D4 100%); /* emerald-600 to cyan-500 */
+            transition: all 0.3s ease-out; /* Simplified transition */
+            background-size: 200% 100%;
+        }
+        .dark .bg-custom-green {
+            background-image: linear-gradient(to right, #059669 0%, #0D9488 100%); /* emerald-600 to teal-600 */
+        }
+        
+        /* --- Hover & Animation States --- */
+        
+        /* Button hover (for project.html) */
+        a.bg-custom-green:hover {
+            background-position: -100% 0; /* Shift gradient on hover */
+            transform: scale(1.05); /* "wobble" / pulse effect */
+        }
+        .dark a.bg-custom-green:hover {
+            background-position: -100% 0;
+            transform: scale(1.05);
+        }
+
+
+        /* Main Text Color (was dark #273032) */
+        .text-custom-dark { 
+            color: #1F2937; /* Tailwind gray-800 */
+            transition: color 0.3s ease-in-out;
+        }
+        .dark .text-custom-dark {
+            color: #F3F4F6; /* gray-100 */
+        }
+
+        /* --- Specific to index.html --- */
+        /* Modern lift effect for cards */
+        #hobbies article {
+            /* Add transition base state */
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+        #hobbies article:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg with green tint */
+        }
+        .dark #hobbies article:hover {
+             box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg with bright green tint */
+        }
+    </style>
+</head>
+<body class="text-custom-dark">
+
+    <div class="container mx-auto max-w-6xl p-4 relative">
+
+        <!-- Header -->
+        <header class="border-b-2 border-custom-green pb-6 mb-8 text-center">
+            <p class="text-xl text-gray-600 dark:text-gray-400">
+                The websites made by Hingham Buckingham
+            </p>
+        </header>
+
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" type="button" class="absolute top-6 right-4 sm:top-8 sm:right-8 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <!-- Light Mode Icon -->
+            <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.95-.464l-.707-.707a1 1 0 10-1.414 1.414l.707.707a1 1 0 001.414-1.414zM1.464 4.95l.707.707a1 1 0 01-1.414 1.414L.757 5.657A1 1 0 011.464 4.95z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            <!-- Dark Mode Icon -->
+            <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        </button>
+        
+        <div class="flex flex-col md:flex-row gap-8">
+
+            <!-- Sidebar -->
+            <aside class="w-full md:w-1/4 lg:w-1/5 sticky top-8 self-start">
+                <nav class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-custom-green mb-4">LINKS</h2>
+                    <ul class="space-y-3 mb-6">
+                        <li><a href="#" class="text-lg text-gray-700 dark:text-gray-300">・ Profile</a></li>
+                        <li><a href="project.html" class="text-lg text-gray-700 dark:text-gray-300">・ Project</a></li>
+                        <li><a href="#" class="text-lg text-gray-700 dark:text-gray-300">・ Recent News</a></li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-bold text-custom-green mb-4">TOPICS</h2>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-lg text-gray-700 dark:text-gray-300">・ About This website</a></li>
+                        <li><a href="#hobbies" class="text-lg text-gray-700 dark:text-gray-300">・ Hobbies</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="w-full md:w-3/4 lg:w-4/5">
+                
+                <!-- About this website Section -->
+                <section id="about" class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md mb-8">
+                    <h2 class="text-3xl font-bold bg-custom-light-blue text-custom-dark -mt-8 -mx-8 mb-6 px-8 py-4 rounded-t-lg">
+                        About this website
+                    </h2>
+                    <div class="space-y-4 text-lg text-gray-800 dark:text-gray-200">
+                        <p>Welcome, this website is just for nothing. If you would like to see my random post, it's weird but ok.</p>
+                        <p>The reason why I made this website is simple. I just made this website for a school project so this website is almost alike the practice one.</p>
+                        <p>If I'll make a new website in the future, I might post the link here. However, I won't add any fun part in here, because it's boring to do so. To check my links and recent news, access the website below.</p>
+                    </div>
+                </section>
+
+                <!-- Hobbies Section -->
+                <section id="hobbies" class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+                    <h2 class="text-3xl font-bold bg-custom-light-blue text-custom-dark -mt-8 -mx-8 mb-6 px-8 py-4 rounded-t-lg">
+                        Hobbies
+                    </h2>
+                    <p class="text-lg text-gray-800 dark:text-gray-200 mb-6">From here, I will going to introduce my hobbies.</p>
+
+                    <!-- Musics Subsection -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-custom-green mb-6 border-b pb-2">Musics</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            
+                            <!-- Artist Card 1 -->
+                            <article class="border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm overflow-hidden bg-white dark:bg-gray-800">
+                                <div class="p-6">
+                                    <h4 class="text-xl font-semibold text-custom-green mb-3">YACA IN DA HOUSE :Trackmaker</h4>
+                                </div>
+                                <!-- Responsive YouTube Embed -->
+                                <div class="aspect-w-16 aspect-h-9 bg-black">
+                                    <iframe src="https://www.youtube.com/embed/XSRVsc-NkAA" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                                </div>
+                                <div class="p-6 bg-gray-50 dark:bg-gray-700/[.5]">
+                                    <p class="mb-2"><a href="https://twitter.com/c_yaca?s=20" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Twitter: @c_yaca</a></p>
+                                    <p><a href="https://www.youtube.com/channel/UCnp8kxpT6Z978ZEMVFn58nw" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">YouTube: YACA IN DA HOUSE</a></p>
+                                </div>
+                            </article>
+                            
+                            <!-- Artist Card 2 -->
+                            <article class="border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm overflow-hidden bg-white dark:bg-gray-800">
+                                <div class="p-6">
+                                    <h4 class="text-xl font-semibold text-custom-green mb-3">somunia :Singing somewhere in the internet</h4>
+                                </div>
+                                <!-- Responsive YouTube Embed -->
+                                <div class="aspect-w-16 aspect-h-9 bg-black">
+                                    <iframe src="https://www.youtube.com/embed/hNvV8DgRvOU" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                                </div>
+                                <div class="p-6 bg-gray-50 dark:bg-gray-700/[.5]">
+                                    <p class="mb-2"><a href="https://twitter.com/she_is_wired?s=20" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Twitter: @she_is_wired</a></p>
+                                    <p class="mb-2"><a href="https://www.youtube.com/channel/UCqhnvjASWaS1eF_023Y--DQ" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">YouTube: somunia room</a></p>
+                                    <p><a href="https://somunia.stores.jp/" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Shop: somunia store</a></p>
+                                </div>
+                            </article>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Games Subsection -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-custom-green mb-4 border-b dark:border-gray-700 pb-2">Games</h3>
+                        <p class="text-lg text-gray-500 dark:text-gray-400 italic">(Your content for games goes here.)</p>
+                    </div>
+
+                </section>
+            </main>
+
+        </div> <!-- end flex container -->
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 dark:text-gray-400 mt-12 py-6 border-t dark:border-gray-700">
+            <p>&copy; 2024 Hingham Buckingham. All rights reserved.</p>
+        </footer>
+
+    </div> <!-- end container -->
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+
+            // Function to set theme
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    lightIcon.classList.add('hidden');
+                    darkIcon.classList.remove('hidden');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    lightIcon.classList.remove('hidden');
+                    darkIcon.classList.add('hidden');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            // Check for saved theme in localStorage
+            const savedTheme = localStorage.getItem('theme');
+            let isDark;
+
+            if (savedTheme) {
+                isDark = (savedTheme === 'dark');
+            } else {
+                // If no saved theme, check system preference
+                isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            }
+
+            // Apply initial theme
+            setTheme(isDark);
+
+            // Add click listener
+            themeToggleBtn.addEventListener('click', () => {
+                const currentlyDark = document.documentElement.classList.contains('dark');
+                setTheme(!currentlyDark);
+            });
+        })();
+    </script>
+
 </body>
-</div>
+</html>
